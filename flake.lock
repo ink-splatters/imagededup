@@ -39,7 +39,6 @@
     "gitignore": {
       "inputs": {
         "nixpkgs": [
-          "pre-commit-hooks",
           "nixpkgs"
         ]
       },
@@ -75,7 +74,9 @@
     "pre-commit-hooks": {
       "inputs": {
         "flake-compat": "flake-compat",
-        "gitignore": "gitignore",
+        "gitignore": [
+          "gitignore"
+        ],
         "nixpkgs": [
           "nixpkgs"
         ],
@@ -100,6 +101,7 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
+        "gitignore": "gitignore",
         "nixpkgs": "nixpkgs",
         "pre-commit-hooks": "pre-commit-hooks",
         "systems": "systems"

@@ -8,12 +8,17 @@
       url = "github:numtide/flake-utils";
       inputs.systems.follows = "systems";
     };
+    gitignore = {
+      url = "github:hercules-ci/gitignore.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     pre-commit-hooks = {
       url = "github:cachix/pre-commit-hooks.nix";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         nixpkgs-stable.follows = "nixpkgs";
         flake-utils.follows = "flake-utils";
+        gitignore.follows = "gitignore";
       };
     };
   };
